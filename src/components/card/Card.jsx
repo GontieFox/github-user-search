@@ -61,20 +61,20 @@ const Card = () => {
                 </div>
                 <div className="grid grid-cols-2 grid-rows-2 gap-5 mt-10">
                     <div className="flex">
-                        <img src={Location} alt="Location" className="w-4 h-5" />
-                        <h4 className="text-saturated-white ml-5">{user.location ? user.location : "Not available"}</h4>
+                        <img src={Location} alt="Location" className={`w-4 h-5 ${user.location ? "" : "opacity-50"}`} />
+                        <h4 className={`text-saturated-white ${user.location ? "" : "opacity-50"} ml-5`}>{user.location ? user.location : "Not available"}</h4>
                     </div>
                     <div className="flex">
-                        <img src={Twitter} alt="Twitter" className="w-5 h-5 opacity-50" />
-                        <h4 className="text-saturated-white opacity-50 ml-5">{user.twitter_username ? user.twitter_username : "Not available"}</h4>
+                        <img src={Twitter} alt="Twitter" className={`w-5 h-5 ${user.twitter_username ? "" : "opacity-50"}`} />
+                        <h4 className={`text-saturated-white ${user.twitter_username ? "" : "opacity-50"} ml-5`}>{user.twitter_username ? user.twitter_username : "Not available"}</h4>
                     </div>
                     <div className="flex">
-                        <img src={Website} alt="Website" className="w-5 h-5" />
-                        <h4 className="text-saturated-white ml-5">{user.blog ? user.blog : "Not available"}</h4>
+                        <img src={Website} alt="Website" className={`w-5 h-5 ${user.blog ? "" : "opacity-50"}`}  />
+                        <h4 className={`text-saturated-white ${user.blog ? "" : "opacity-50"} ml-5`}>{user.blog ? user.blog : "Not available"}</h4>
                     </div>
                     <div className="flex">
-                        <img src={Company} alt="Company" className="w-5 h-5" />
-                        <h4 className="text-saturated-white ml-5">{user.company ? user.company : "Not available"}</h4>
+                        <img src={Company} alt="Company" className={`w-5 h-5 ${user.company ? "" : "opacity-50"}`}  />
+                        <h4 className={`text-saturated-white ${user.company ? "" : "opacity-50"} ml-5`}>{user.company ? user.company : "Not available"}</h4>
                     </div>
                 </div>
             </div>
