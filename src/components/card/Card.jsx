@@ -47,7 +47,7 @@ const Card = ({ isDarkMode }) => {
                 <div className="mt-5">
                     <p className="text-grayish-blue font-bold">{userData.bio ? userData.bio : "This profile has no bio"}</p>
                 </div>
-                <div className={`${isDarkMode ? "bg-dark-white" : "bg-very-dark-blue"} transition-colors duration-500 mt-10 flex justify-around py-4 rounded-xl`}>
+                <div className={`${isDarkMode ? "bg-dark-white" : "bg-very-dark-blue"} transition-colors duration-500 mt-6 flex justify-around py-4 rounded-xl`}>
                     <div>
                         <h3 className={`${isDarkMode ? "text-very-dark-blue" : "text-saturated-white"} transition-colors duration-500`}>Repos</h3>
                         <span className={`${isDarkMode ? "text-dark-blue" : "text-white"} transition-colors duration-500 font-bold text-2xl`}>{userData.public_repos ? userData.public_repos : "0"}</span>
@@ -61,22 +61,22 @@ const Card = ({ isDarkMode }) => {
                         <span className={`${isDarkMode ? "text-dark-blue" : "text-white"} transition-colors duration-500 font-bold text-2xl`}>{userData.following ? userData.following : "0"}</span>
                     </div>
                 </div>
-                <div className="grid grid-cols-2 grid-rows-2 gap-5 mt-10">
+                <div className="grid grid-cols-2 grid-rows-2 gap-5 mt-6">
                     <div className="flex">
                         <img src={isDarkMode ? LocationDark : LocationLight} alt="Location" className={`w-4 h-5 transition-all duration-500 ${userData.location ? "" : "opacity-60"}`} />
-                        <h4 className={`${isDarkMode ? "text-very-dark-blue" : "text-saturated-white"} transition-colors duration-500 ${userData.location ? "" : "opacity-60"} ml-5`}>{userData.location ? userData.location : "Not available"}</h4>
+                        <h4 className={`${isDarkMode ? "text-very-dark-blue" : "text-saturated-white"} text-sm transition-colors duration-500 ${userData.location ? "" : "opacity-60"} ml-3`}>{userData.location ? userData.location : "Not available"}</h4>
                     </div>
-                    <div className="flex">
+                    <div className="flex justify-end">
                         <img src={isDarkMode ? TwitterDark : TwitterLight} alt="Twitter" className={`w-5 h-5 transition-all duration-500 ${userData.twitter_username ? "" : "opacity-60"}`} />
-                        <h4 className={`${isDarkMode ? "text-very-dark-blue" : "text-saturated-white"} transition-colors duration-500 ${userData.twitter_username ? "" : "opacity-60"} ml-5`}>{userData.twitter_username ? userData.twitter_username : "Not available"}</h4>
+                        <h4 className={`${isDarkMode ? "text-very-dark-blue" : "text-saturated-white"} text-sm transition-colors duration-500 ${userData.twitter_username ? "" : "opacity-60"} ml-3`}>{userData.twitter_username ? userData.twitter_username : "Not available"}</h4>
                     </div>
                     <div className="flex">
                         <img src={isDarkMode ? WebsiteDark : WebsiteLight} alt="Website" className={`w-5 h-5 transition-all duration-500 ${userData.blog ? "" : "opacity-60"}`} />
-                        <h4 className={`${isDarkMode ? "text-very-dark-blue" : "text-saturated-white"} transition-colors duration-500 ${userData.blog ? "" : "opacity-60"} ml-5`}>{userData.blog ? userData.blog : "Not available"}</h4>
+                        <h4 className={`${isDarkMode ? "text-very-dark-blue" : "text-saturated-white"} text-sm transition-colors duration-500 ${userData.blog ? "" : "opacity-60"} ml-3`}>{userData.blog ? userData.blog : "Not available"}</h4>
                     </div>
-                    <div className="flex">
+                    <div className="flex justify-end">
                         <img src={isDarkMode ? CompanyDark : CompanyLight} alt="Company" className={`w-5 h-5 transition-all duration-500 ${userData.company ? "" : "opacity-60"}`} />
-                        <h4 className={`${isDarkMode ? "text-very-dark-blue" : "text-saturated-white"} transition-colors duration-500 ${userData.company ? "" : "opacity-60"} ml-5`}>{userData.company ? userData.company : "Not available"}</h4>
+                        <h4 className={`${isDarkMode ? "text-very-dark-blue" : "text-saturated-white"} text-sm transition-colors duration-500 ${userData.company ? "" : "opacity-60"} ml-3`}>{userData.company ? userData.company : "Not available"}</h4>
                     </div>
                 </div>
             </div>
