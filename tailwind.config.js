@@ -10,8 +10,11 @@ module.exports = {
       },
       backgroundImage: {
         'sun': "url('/src/assets/images/icon-sun.svg')",
-        'moon': "url('./src/assets/images/icon-moon.svg')",
+        'moon': "url('/src/assets/images/icon-moon.svg')",
       },
+      boxShadow: {
+        'card': "0px 16px 30px -10px rgba(70, 96, 187, 0.1986)",
+      }
     },
     colors: {
       'blue': 'hsl(212, 100%, 50%)',
@@ -20,11 +23,11 @@ module.exports = {
       'grayish-blue': 'hsl(217, 20%, 51%)',
       'desautareted-blue': 'hsl(217, 35%, 45%)',
       'dark-blue': 'hsl(217, 21%, 21%)',
-      'saturated-white': 'hsl(227, 100%, 98%)',
+      'saturated-white': 'hsl(227, 27%, 90%)',
+      'dark-white': 'hsl(227, 7%, 75%)',
       'very-dark-blue': 'hsl(220, 40%, 13%)',
       'dark-desaturated-blue': 'hsl(222, 41%, 20%)',
       'hover-blue': 'hsl(212, 100%, 69%)',
-      'shadow-box': '0px 16px 30px -10px rgba(70, 96, 187, 0.1986)',
     },
   },
   plugins: [],
