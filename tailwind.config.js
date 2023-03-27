@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       spacing: {
-        'main-card': '450px',
+        'card-desktop': '450px',
       },
       backgroundImage: {
         'sun': "url('/src/assets/images/icon-sun.svg')",
