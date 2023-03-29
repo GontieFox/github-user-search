@@ -9,7 +9,7 @@ const Home = () => {
     }
 
     return (<div className={`${isDarkMode ? "bg-white" : "bg-very-dark-blue"} transition-colors duration-500 h-screen flex flex-col justify-center items-center`}>
-        <div className="flex justify-between 2xl:w-5/12 lg:w-7/12 sm:w-8/12 w-11/12">
+        <div className="flex justify-between 2xl:w-5/12 xl:w-6/12 lg:w-7/12 sm:w-8/12 w-11/12">
             <h2 className={`${isDarkMode ? "text-very-dark-blue" : "text-white"} transition-colors duration-500 text-2xl font-bold`}>devfinder</h2>
             <div className="flex items-center">
                 <span className={`${isDarkMode ? "text-very-dark-blue" : "text-white"} transition-colors duration-500 text-base uppercase tracking-wider mr-5`}>{isDarkMode ? "light" : "dark"}</span>

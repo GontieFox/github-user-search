@@ -28,7 +28,7 @@ const Card = ({ isDarkMode }) => {
     const formattedDate = `Joined ${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
 
     return (<>
-        <div className={`${isDarkMode ? "bg-saturated-white" : "bg-dark-desaturated-blue"} transition-colors duration-500 mt-10 2xl:w-5/12 lg:w-7/12 sm:w-8/12 w-11/12 h-16 rounded-xl flex justify-between shadow-card`}>
+        <div className={`${isDarkMode ? "bg-saturated-white" : "bg-dark-desaturated-blue"} ${userData.login ? "" : "border-2 border-red"} transition-colors duration-500 mt-10 2xl:w-5/12 xl:w-6/12 lg:w-7/12 sm:w-8/12 w-11/12 h-16 rounded-xl flex justify-between shadow-card`}>
             <div className="flex w-4/5">
                 <img src={search} alt="Search" className="h-6 w-6 m-5" />
                 <input type="text" placeholder="Search GitHub username..." onChange={(e) => setUser(e.target.value)} className={`${isDarkMode ? "bg-saturated-white placeholder-dark-desaturated-blue text-dark-desaturated-blue" : "bg-dark-desaturated-blue placeholder-white text-white"} transition-colors duration-500 my-3 w-4/5 sm:text-lg text-base focus:outline-none`} />
@@ -36,7 +36,7 @@ const Card = ({ isDarkMode }) => {
             <button onClick={handleSubmit} type="button" className="text-white bg-blue m-2 w-28 rounded-lg hover:bg-hover-blue transition-all ease-in duration-100">Search</button>
         </div>
 
-        <div className={`${isDarkMode ? "bg-saturated-white" : "bg-dark-desaturated-blue"} transition-colors duration-500 mt-6 2xl:w-5/12 lg:w-7/12 sm:w-8/12 w-11/12 xl:h-card-desktop rounded-xl sm:p-8 p-4 flex shadow-card`}>
+        <div className={`${isDarkMode ? "bg-saturated-white" : "bg-dark-desaturated-blue"} transition-colors duration-500 mt-6 2xl:w-5/12 xl:w-6/12 lg:w-7/12 sm:w-8/12 w-11/12 xl:h-card-desktop rounded-xl sm:p-8 p-4 flex shadow-card`}>
             <img src={userData.avatar_url ? userData.avatar_url : Avatar} alt="user" className="sm:w-32 sm:h-32 w-20 h-20 rounded-full flex absolute xl:relative" />
             <div className="w-full xl:ml-10">
                 <div className="grid xl:grid-cols-2 xl:grid-rows-2 xl:gap-2 gap-0 grid-cols-1 grid-rows-3 sm:ml-40 ml-24 xl:ml-0">
@@ -45,7 +45,7 @@ const Card = ({ isDarkMode }) => {
                     <p className="text-blue text-lg">@{userData.login ? userData.login : "octocat"}</p>
                 </div>
                 <div className="mt-10 xl:mt-5">
-                    <p className="text-grayish-blue font-bold">{userData.bio ? userData.bio : "This profile has no bio"}</p>
+                    <p className="text-grayish-blue font-bold pt-3">{userData.bio ? userData.bio : "This profile has no bio"}</p>
                 </div>
                 <div className={`${isDarkMode ? "bg-dark-white" : "bg-very-dark-blue"} transition-colors duration-500 mt-6 flex justify-around py-4 rounded-xl`}>
                     <div>
