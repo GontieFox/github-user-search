@@ -22,16 +22,22 @@ const Card = ({ isDarkMode }) => {
         setUserData(data);
     }
 
+    const handleKeyDown = (event) => {
+        if (event.key === "Enter") {
+            handleSubmit();
+        }
+    }
+
     const date = new Date(userData.created_at);
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
     const formattedDate = `Joined ${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
 
     return (<>
-        <div className={`${isDarkMode ? "bg-saturated-white" : "bg-dark-desaturated-blue"} ${userData.login ? "" : "border-2 border-red"} transition-colors duration-500 mt-10 2xl:w-5/12 xl:w-6/12 lg:w-7/12 sm:w-8/12 w-11/12 h-16 rounded-xl flex justify-between shadow-card`}>
+        <div className={`${isDarkMode ? "bg-saturated-white" : "bg-dark-desaturated-blue"} transition-colors duration-500 mt-10 2xl:w-5/12 xl:w-6/12 lg:w-7/12 sm:w-8/12 w-11/12 h-16 rounded-xl flex justify-between shadow-card`}>
             <div className="flex w-4/5">
                 <img src={search} alt="Search" className="h-6 w-6 m-5" />
-                <input type="text" placeholder="Search GitHub username..." onChange={(e) => setUser(e.target.value)} className={`${isDarkMode ? "bg-saturated-white placeholder-dark-desaturated-blue text-dark-desaturated-blue" : "bg-dark-desaturated-blue placeholder-white text-white"} transition-colors duration-500 my-3 w-4/5 sm:text-lg text-base focus:outline-none`} />
+                <input type="text" placeholder="Search GitHub username..." onChange={(e) => setUser(e.target.value)} onKeyUp={handleKeyDown} className={`${isDarkMode ? "bg-saturated-white placeholder-dark-desaturated-blue text-dark-desaturated-blue" : "bg-dark-desaturated-blue placeholder-white text-white"} transition-colors duration-500 my-3 w-4/5 sm:text-lg text-base focus:outline-none`} />
             </div>
             <button onClick={handleSubmit} type="button" className="text-white bg-blue m-2 w-28 rounded-lg hover:bg-hover-blue transition-all ease-in duration-100">Search</button>
         </div>
